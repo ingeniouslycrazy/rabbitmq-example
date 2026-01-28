@@ -1,0 +1,10 @@
+FROM python:3.14.2-slim-trixie
+
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Upgrade pip
+RUN pip install --upgrade pip
+
+# Installi Ansible
+RUN pip install pika
